@@ -6,13 +6,19 @@ const input = require("fs")
   .trim()
   .split("\n");
 
-input.shift();
+let temp = [];
+let length = input.shift();
 
-input.forEach(element => {
-  let answer = "";
-  element.split(" ").forEach(data => {
-    // console.log(data.split("").reverse().join("").trim());
-    answer += data.split("").reverse().join("").trim() + " ";
-  });
-  console.log(answer);
-});
+for (let i = 0; i < length; i++) {
+  let cnt = 0;
+
+  for (let s of input[i]) {
+    cnt += s === "(" ? 1 : -1;
+
+    if (cnt < 0) break;
+  }
+
+  temp.push(cnt === 0 ? "YES" : "NO");
+}
+
+console.log(temp.join("\n"));
