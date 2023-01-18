@@ -11,7 +11,10 @@ const input = require("fs")
 
 const [N, K] = input;
 
-function solution(n, k) {}
+function solution(n, k) {
+  let result = "";
+  return result;
+}
 
-answer = solution(N, K);
+const answer = solution(N, K);
 console.log(answer);
