@@ -1,5 +1,5 @@
 const filePath =
-  process.platform === "linux" ? "/dev/stdin" : "./basic/test.txt";
+  process.platform === "linux" ? "/dev/stdin" : "./basic//test.txt";
 const input = require("fs")
   .readFileSync(filePath)
   .toString()
