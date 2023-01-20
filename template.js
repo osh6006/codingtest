@@ -7,12 +7,10 @@ const input = require("fs")
   .split(" ")
   .map(Number);
 
-const [N, K] = input;
-
-function solution(n, k) {
+function solution(string) {
   let result = "";
   return result;
 }
 
-const answer = solution(N, K);
+const answer = solution(input);
 console.log(answer);
