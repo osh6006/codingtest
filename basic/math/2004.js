@@ -16,10 +16,20 @@ const input = require("fs")
   .split(" ")
   .map(Number);
 
-function solution(string) {
+const answer = solution(input);
+console.log(answer);
+
+function solution(numArr) {
   let result = "";
+  calCombination(numArr[0], numArr[1]);
   return result;
 }
 
-const answer = solution(input);
-console.log(answer);
+function calCombination(n, r) {
+  return factorial(n) / (factorial(n - r) * factorial(r));
+}
+
+function factorial(num) {
+  if (num <= 1) return 1;
+  return num * factorial(num - 1);
+}
